@@ -4,7 +4,10 @@ import './Footer.css';
 
 const Footer = props => (
     <footer className="App-footer">
-      <p>&copy; 2018 Jonathan White</p>
+      <div>
+      	<span>&copy; 2018 Jonathan White | </span>
+      	<a href="mailto:jon.white2@gmail.com" target="_blank">jon.white2@gmail.com</a>
+      </div>
       <div>
       	<Social />
       </div>

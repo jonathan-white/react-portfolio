@@ -11,7 +11,7 @@
 		"technologies": ["jQuery"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 5
+		"order": 6
 	},
 	{
 		"id": 2,
@@ -25,7 +25,7 @@
 		"technologies": ["Bootstrap","jQuery"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 7
+		"order": 8
 	},
 	{
 		"id": 3,
@@ -39,7 +39,7 @@
 		"technologies": ["jQuery"],
 		"showcase": 1,
 		"feature": 1,
-		"order": 4
+		"order": 5
 	},
 	{
 		"id": 4,
@@ -53,7 +53,7 @@
 		"technologies": ["jQuery","Giphy API"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 6
+		"order": 7
 	},
 	{
 		"id": 5,
@@ -69,7 +69,7 @@
 		"technologies": ["Bootstrap","jQuery","Firebase","Slick.js","News API","Youtube API","Google Books API"],
 		"showcase": 1,
 		"feature": 1,
-		"order": 3
+		"order": 4
 	},
 	{
 		"id": 6,
@@ -83,7 +83,7 @@
 		"technologies": ["Bootstrap","jQuery","Firebase","Moment.js"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 8
+		"order": 9
 	},
 	{
 		"id": 7,
@@ -97,7 +97,7 @@
 		"technologies": ["Node.js","Twitter API","Spotify API","OMDb API"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 9
+		"order": 10
 	},
 	{
 		"id": 8,
@@ -111,7 +111,7 @@
 		"technologies": ["Node.js"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 10
+		"order": 11
 	},
 	{
 		"id": 9,
@@ -125,7 +125,7 @@
 		"technologies": ["Node.js"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 11
+		"order": 12
 	},
 	{
 		"id": 10,
@@ -139,7 +139,7 @@
 		"technologies": ["Node.js","Bootstrap","jQuery","Font Awesome","Heroku"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 12
+		"order": 13
 	},
 	{
 		"id": 11,
@@ -153,7 +153,7 @@
 		"technologies": ["Node.js","Bootstrap","jQuery","MySQL"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 13
+		"order": 14
 	},
 	{
 		"id": 12,
@@ -167,7 +167,7 @@
 		"technologies": ["Node.js","Bootstrap","jQuery","MySQL"],
 		"showcase": 1,
 		"feature": 0,
-		"order": 14
+		"order": 15
 	},
 	{
 		"id": 13,
@@ -196,5 +196,19 @@
 		"showcase": 1,
 		"feature": 1,
 		"order": 1
+	},
+	{
+		"id": 15,
+		"title": "Dry Memes",
+		"live_url": "https://drymemes.herokuapp.com/",
+		"code_url": "https://github.com/jonathan-white/DryMemes",
+		"image": "assets/images/drymemes.png",
+		"description": "Meme generator designed o make famous works of art even better through user input. Search from over 5000 works of art!",
+		"categories": ["Utility"],
+		"tags": ["memes"],
+		"technologies": ["Node.js","Bootstrap","jQuery"],
+		"showcase": 1,
+		"feature": 1,
+		"order": 3
 	}
 ]
