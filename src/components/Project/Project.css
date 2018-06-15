@@ -1,0 +1,80 @@
+.project-item {
+	max-width: 400px;
+	width: 80%;
+	margin: 20px;
+	border-radius: .1875rem;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
+	transition: all 500ms ease;
+	overflow: hidden;
+}
+
+.project-item:hover {
+  transform: translateY(-1px) scale(1.01);
+  transform: matrix(1.05,0,0,1,0,-10);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2), 5px 0 20px rgba(0,0,0,0.4), -5px 0 20px rgba(0,0,0,0.4);
+  border-radius: 20px / 50%;
+}
+
+.project-header {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    overflow: hidden;
+}
+
+.project-header::after {
+	content: '';
+	position: absolute;
+	background-image: linear-gradient(to top, #00f, transparent);
+	width: 200px;
+	height: 300px;
+	right: 0;
+	top: -50px;
+	transform: rotate(30deg);
+}
+
+.project-image {
+	width: 150px;
+	height: 100px;
+}
+
+.project-detail-label {
+	color: rgba(0, 51, 204, 1);
+	margin-right: 3px;
+}
+
+.project-desc {
+	margin-bottom: 10px;
+}
+
+.project-tct {
+	font-style: italic;
+}
+
+.project-details {
+	font-size: .875rem;
+	border-top: 1px dashed #bbb;
+    padding-top: 10px;
+}
+
+.project-title {
+	position: relative;
+    width: 40%;
+}
+
+.project-title h3 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #000;
+	width: 100%;
+}
+
+.project-body {
+	position: relative;
+	background-image: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,.3) 100%);	
+}

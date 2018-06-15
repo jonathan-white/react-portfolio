@@ -1,0 +1,21 @@
+.social-links {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	-webkit-padding-start: 0;
+}
+
+.App-header .social-links {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+.social-icon {
+	list-style: none;
+	margin: 0 10px;
+}
+
+.social-icon .github {
+	color: #fff;
+}

@@ -1,0 +1,25 @@
+.nav {
+  background-color: rgba(153, 153, 255, 1);
+}
+
+.nav-tabs {
+	justify-content: space-around;
+}
+
+.nav-tabs-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-tabs .nav-item {
+	width: 33%;
+}
+
+.nav-tabs .nav-link {
+  color: #000;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent; 
+  font-weight: 600;
+}
