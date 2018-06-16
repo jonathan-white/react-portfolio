@@ -41,7 +41,7 @@ const About = () => (
       </div>
     </div>
   </div>
-  <div>
+  <div className="featured-section">
     <p className="featured">Below are a few projects I've worked on. <Link to={`/my-work`} component={'Portfolio'}>Click here to view more.</Link></p>
     <div className="row porfolio-wrapper">
       {portfolios.filter(p => p.feature === 1)

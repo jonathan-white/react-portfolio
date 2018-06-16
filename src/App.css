@@ -108,4 +108,8 @@
   .skills div {
     width: initial;
   }
+
+  .featured-section {
+    text-align: center;
+  }
 }
