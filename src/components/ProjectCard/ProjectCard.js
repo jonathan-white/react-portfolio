@@ -14,15 +14,17 @@ const ProjectCard = props => {
 				<div>{props.description}</div>
 			</div>
 			<div className="links">
+				{props.live_url && 
 				<div className="site-link">
 					<a href={props.live_url} target="_blank" rel="noopener noreferrer">
-						<i class="fas fa-link"></i>
+						<i className="fas fa-link"></i>
 						<div className="desc">View Site</div>
 					</a>
 				</div>
+				}
 				<div className="code-link">
 					<a href={props.code_url} target="_blank" rel="noopener noreferrer">
-						<i class="fab fa-github fa-2x"></i>
+						<i className="fab fa-github fa-2x"></i>
 						<div className="desc">View Code</div>
 					</a>
 				</div>
