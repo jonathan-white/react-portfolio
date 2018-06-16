@@ -6,7 +6,7 @@ const Project = props => {
 		<div className="card project-item text-left">
 			<div className="card-header project-header">
 				<div className="">
-					<a href={props.live_url ? props.live_url : props.code_url} target="_blank">
+					<a href={props.live_url ? props.live_url : props.code_url} target="_blank" rel="noopener noreferrer">
 						<img className="project-image" src={props.image} alt={props.title}/>
 					</a>
 				</div>
@@ -41,9 +41,9 @@ const Project = props => {
 					</div>
 					<div className="col-4 d-flex flex-column justify-content-around">
 						{props.live_url && 
-							<div><a href={props.live_url} target="_blank">View Site</a></div>
+							<div><a href={props.live_url} target="_blank" rel="noopener noreferrer">View Site</a></div>
 						}
-						<div><a href={props.code_url} target="_blank">Github</a></div>
+						<div><a href={props.code_url} target="_blank" rel="noopener noreferrer">Github</a></div>
 					</div>
 				</div>
 			</div>

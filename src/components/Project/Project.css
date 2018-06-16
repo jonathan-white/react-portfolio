@@ -55,7 +55,7 @@
 }
 
 .project-details {
-	font-size: .875rem;
+	font-size: 1rem;
 	border-top: 1px dashed #bbb;
     padding-top: 10px;
 }
@@ -77,4 +77,11 @@
 .project-body {
 	position: relative;
 	background-image: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,.3) 100%);	
+}
+
+@media screen and (max-width: 768px) {
+	.project-header::after {
+		transform: none;
+		right: -70px;
+	}
 }

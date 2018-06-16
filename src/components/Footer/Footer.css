@@ -10,3 +10,23 @@
   padding: 10px 20px;
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .project-header::after {
+    transform: none;
+    right: -70px;
+  }
+
+  .App-footer {
+    height: 100px;
+    justify-content: space-evenly;
+  }
+
+  .App-footer .divider {
+    display: none;
+  }
+
+  .App-footer .copyright {
+    display: block;
+  }
+}

@@ -4,15 +4,18 @@ import Project from '../Project/Project';
 import portfolios from '../../portfolios.json';
 
 const About = () => (
-<section className="container text-left">
+<section className="container about-page">
   <h1>Hi, I'm Jonathan...</h1>
   <div className="about-head">
+    <div className="about-photo">
+      <img id="profile-pic" src="/assets/images/pic1.jpeg" alt="Jonathan White"/>
+    </div>
     <div>
-      <p>I'm a freelance full-stack web developer with a love for all things tech. 
+      <p className="bio">I'm a freelance full-stack web developer with a love for all things tech. 
       JavaScript is a second language for me and I enjoy building fun and creative 
       apps for the web.</p>
       <div className="skills">
-        <div>
+        <div className="skillset-1">
           <p>I have experience working with the following web technologies:</p>
           <ul>
             <li>Node.js</li>
@@ -26,7 +29,7 @@ const About = () => (
             <li>Materialize CSS</li>
           </ul> 
         </div>
-        <div>
+        <div className="skillset-2">
           <p>...as well as with these:</p>
           <ul>
             <li>Office 365 SharePoint</li>
@@ -37,25 +40,24 @@ const About = () => (
         </div>
       </div>
     </div>
-    <div className="about-photo">
-      <img src="/assets/images/pic1.jpeg" alt="Jonathan White"/>
+  </div>
+  <div className="featured">
+    <p>Below are a few projects I've worked on. <Link to={`/my-work`} component={'Portfolio'}>Click here to view more.</Link></p>
+    <div className="row porfolio-wrapper">
+      {portfolios.filter(p => p.feature === 1)
+          .sort((a,b) => (a.order-b.order))
+          .map(project => (
+        <Project 
+          key={project.id}
+          {...project}
+        />
+        )
+      )}
     </div>
+    <Link className="link-with-icon" to={`/my-work`} component={'Portfolio'}>
+      <i className="fas fa-arrow-circle-right link-icon fa-2x"></i>
+    </Link>
   </div>
-  <p>Below are a few projects I've worked on. Click <Link to={`/my-work`} component={'Portfolio'}>here</Link> to view more.</p>
-  <div className="row porfolio-wrapper">
-    {portfolios.filter(p => p.feature === 1)
-        .sort((a,b) => (a.order-b.order))
-        .map(project => (
-      <Project 
-        key={project.id}
-        {...project}
-      />
-      )
-    )}
-  </div>
-  <Link className="link-with-icon" to={`/my-work`} component={'Portfolio'}>
-    <i className="fas fa-arrow-circle-right link-icon fa-2x"></i>
-  </Link>
 </section>
 );
 

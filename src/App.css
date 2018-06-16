@@ -21,8 +21,17 @@
 
 /* About Page */
 
+.about-page {
+  text-align: left;
+}
+
 .about-head {
   display: flex;
+}
+
+.about-photo {
+  position: relative;
+  margin-right: 30px;
 }
 
 .about-photo img {
@@ -35,8 +44,14 @@
   display: flex;
 }
 
+.skills li {
+  list-style: url(star.svg);
+  /*list-style-image: linear-gradient(#69c, transparent);*/
+}
+
 .skills div {
   margin: 0 20px;
+  width: 50%;
 }
 
 .link-with-icon {
@@ -52,8 +67,55 @@
   margin-right: 5px;
 }
 
+.featured {
+  text-align: left;
+}
+
 /* Contact Me Page */
 
 .email-form .email-message {
   min-height: 100px;
+}
+
+.email-form label {
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .about-page {
+    text-align: center;
+  }
+
+  .about-photo img {
+    width: 200px;
+    width: 60%;
+    border-radius: 0;
+    padding: 8px;
+    border: 1px solid #00f;
+  }
+
+  .about-photo {
+    margin-bottom: 20px;
+  }
+
+  .about-head {
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .bio,
+  .skills {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .skills {
+    display: block;
+  }
+
+  .skills div {
+    width: initial;
+  }
 }
