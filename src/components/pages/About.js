@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Project from '../Project/Project';
+import ProjectCard from '../ProjectCard/ProjectCard';
 import portfolios from '../../portfolios.json';
 
 const About = () => (
@@ -47,7 +47,7 @@ const About = () => (
       {portfolios.filter(p => p.feature === 1)
           .sort((a,b) => (a.order-b.order))
           .map(project => (
-        <Project 
+        <ProjectCard 
           key={project.id}
           {...project}
         />

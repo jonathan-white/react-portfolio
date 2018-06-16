@@ -1,5 +1,5 @@
 import React from "react";
-import Project from '../Project/Project';
+import ProjectCard from '../ProjectCard/ProjectCard';
 import portfolios from '../../portfolios.json';
 
 const Portfolio = () => (
@@ -7,7 +7,7 @@ const Portfolio = () => (
   <h1>Some Projects I've Worked On...</h1>
   <div className="row porfolio-wrapper">
     {portfolios.filter(p => p.showcase === 1).sort((a,b) => (a.order-b.order)).map(project => (
-      <Project 
+      <ProjectCard 
         key={project.id}
         {...project}
       />

@@ -16,28 +16,13 @@
 }
 
 .project-header {
-    background-color: rgba(0,0,0,.03);
-    border-bottom: 1px solid rgba(0,0,0,.125);
-    overflow: hidden;
-}
-
-.header-top {
 	position: relative;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	overflow: hidden;
-}
-
-.header-top::after {
-	content: '';
-	position: absolute;
-	background-image: linear-gradient(to top, #00f, transparent);
-	width: 200px;
-	height: 300px;
-	right: 0;
-	top: -50px;
-	transform: rotate(30deg);
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    overflow: hidden;
 }
 
 .project-image {
@@ -83,22 +68,6 @@
 	background-image: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,.3) 100%);	
 }
 
-.preview {
-	height: 0;
-	transition: all 300ms ease;
-	opacity: 0;
-}
-
-.preview:hover {
-	opacity: 1;
-	height: 100px;
-}
-
-.project-header:hover .preview {
-	height: 100px;
-	opacity: 1;
-}
-
 @media screen and (max-width: 768px) {
 	.project-header {
 		flex-flow: column;
@@ -122,4 +91,16 @@
 	.project-header .project-image {
 		order: 2;
 	}	
+}
+
+@media screen and (max-width: 992px) {
+	.detail-info {
+		display: none;
+	}
+
+	.detail-links {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
+	}
 }

@@ -11,6 +11,8 @@ class Contact extends Component {
     }
   };
 
+  // https://mandrillapp.com/api/docs/index.JSON.html
+
   handleInputChange = event => {
     const {name, value} = event.target;
     this.setState({ [name]: value });
