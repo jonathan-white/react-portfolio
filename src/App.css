@@ -46,6 +46,35 @@
 
 .skills li {
   list-style: url(star.svg);
+  position: relative;
+}
+
+.skills .skill {
+  position: relative;
+}
+
+.skills .skill:hover {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.skills .skill::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background-color: #007bff;
+  visibility: hidden;
+  transition: all 250ms ease;
+}
+
+.skills .skill:hover::before {
+  transform: scaleX(1);
+  visibility: visible;
 }
 
 .skills div {

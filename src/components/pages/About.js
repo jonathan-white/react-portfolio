@@ -18,24 +18,24 @@ const About = () => (
         <div className="skillset-1">
           <p>I have experience working with the following web technologies:</p>
           <ul>
-            <li>Node.js</li>
-            <li>React</li>
-            <li>JavaScript (ES5 & ES6)</li>
-            <li>jQuery</li>
-            <li>MySQL (with Sequelize)</li>
-            <li>MongoDB (with Mongoose)</li>
-            <li>Microsoft SQL Server</li>
-            <li>Bootstrap</li>
-            <li>Materialize CSS</li>
+            <li><span className="skill">Node.js</span></li>
+            <li><span className="skill">React</span></li>
+            <li><span className="skill">JavaScript (ES5 & ES6)</span></li>
+            <li><span className="skill">jQuery</span></li>
+            <li><span className="skill">MySQL (with Sequelize)</span></li>
+            <li><span className="skill">MongoDB (with Mongoose)</span></li>
+            <li><span className="skill">Microsoft SQL Server</span></li>
+            <li><span className="skill">Bootstrap</span></li>
+            <li><span className="skill">Materialize CSS</span></li>
           </ul> 
         </div>
         <div className="skillset-2">
           <p>...as well as with these:</p>
           <ul>
-            <li>Office 365 SharePoint</li>
-            <li>Microsoft Access</li>
-            <li>Visual Basic for Applications</li>
-            <li>Java</li>
+            <li><span className="skill">Office 365 SharePoint</span></li>
+            <li><span className="skill">Microsoft Access</span></li>
+            <li><span className="skill">Visual Basic for Applications</span></li>
+            <li><span className="skill">Java</span></li>
           </ul> 
         </div>
       </div>

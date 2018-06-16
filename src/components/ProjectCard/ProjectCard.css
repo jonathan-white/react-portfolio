@@ -96,14 +96,12 @@
 }
 
 @media screen and (max-width: 768px) {
-	/*Make description always visible*/
-	/*Move Site and Code links below description*/
 	.project-details {
 		position: relative;
 	    opacity: 1;
 	    top: 0;
-	    height: initial;
 	    left: 0;
+	    height: initial;
 	    transform: none;
 	    border-top: 1px solid #d3d3d3;
 	}
