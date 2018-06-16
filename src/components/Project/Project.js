@@ -5,13 +5,18 @@ const Project = props => {
 	return(
 		<div className="card project-item text-left">
 			<div className="card-header project-header">
-				<div className="">
-					<a href={props.live_url ? props.live_url : props.code_url} target="_blank" rel="noopener noreferrer">
-						<img className="project-image" src={props.image} alt={props.title}/>
-					</a>
+				<div className="header-top">
+					<div className="project-image">
+						<a href={props.live_url ? props.live_url : props.code_url} target="_blank" rel="noopener noreferrer">
+							<img className="project-image" src={props.image} alt={props.title}/>
+						</a>
+					</div>
+					<div className="project-title">
+						<h3>{props.title}</h3>
+					</div>
 				</div>
-				<div className="project-title">
-					<h3>{props.title}</h3>
+				<div className="preview">
+					Preview Content
 				</div>
 			</div>
 			<div className="card-body project-body">

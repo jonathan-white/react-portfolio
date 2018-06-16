@@ -41,8 +41,8 @@ const About = () => (
       </div>
     </div>
   </div>
-  <div className="featured">
-    <p>Below are a few projects I've worked on. <Link to={`/my-work`} component={'Portfolio'}>Click here to view more.</Link></p>
+  <div>
+    <p className="featured">Below are a few projects I've worked on. <Link to={`/my-work`} component={'Portfolio'}>Click here to view more.</Link></p>
     <div className="row porfolio-wrapper">
       {portfolios.filter(p => p.feature === 1)
           .sort((a,b) => (a.order-b.order))
@@ -54,8 +54,8 @@ const About = () => (
         )
       )}
     </div>
-    <Link className="link-with-icon" to={`/my-work`} component={'Portfolio'}>
-      <i className="fas fa-arrow-circle-right link-icon fa-2x"></i>
+    <Link className="btn btn-primary" to={`/my-work`} component={'Portfolio'}>
+      View More
     </Link>
   </div>
 </section>

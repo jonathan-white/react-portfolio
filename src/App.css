@@ -46,25 +46,11 @@
 
 .skills li {
   list-style: url(star.svg);
-  /*list-style-image: linear-gradient(#69c, transparent);*/
 }
 
 .skills div {
   margin: 0 20px;
   width: 50%;
-}
-
-.link-with-icon {
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.link-with-icon:hover {
-  text-decoration: none;
-}
-
-.link-text {
-  margin-right: 5px;
 }
 
 .featured {
@@ -107,6 +93,10 @@
   .bio,
   .skills {
     text-align: left;
+  }
+
+  .App:last-child {
+    margin-bottom: 120px;
   }
 }
 

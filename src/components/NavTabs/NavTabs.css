@@ -12,7 +12,7 @@
 }
 
 .nav-tabs .nav-item {
-	width: 33%;
+	flex-grow: 1;
 }
 
 .nav-tabs .nav-link {
