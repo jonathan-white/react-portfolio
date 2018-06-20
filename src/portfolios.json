@@ -214,7 +214,7 @@
 	{
 		"id": 16,
 		"title": "New York Times Article Search",
-		"live_url": "https://nytviewer.herokuapp.com/",
+		"live_url": "",
 		"code_url": "https://github.com/jonathan-white/nytreact",
 		"image": "assets/images/news.jpg",
 		"description": "A New York Times article search that allows users to save news articles for later viewing.",
