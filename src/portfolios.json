@@ -203,12 +203,26 @@
 		"live_url": "https://drymemes.herokuapp.com/",
 		"code_url": "https://github.com/jonathan-white/DryMemes",
 		"image": "assets/images/drymemes.png",
-		"description": "Meme generator designed o make famous works of art even better through user input. Search from over 5000 works of art!",
+		"description": "Meme generator designed to make famous works of art even better through user input. Search from over 5000 works of art!",
 		"categories": ["Utility"],
 		"tags": ["memes"],
 		"technologies": ["Node.js","Bootstrap","jQuery"],
 		"showcase": 1,
 		"feature": 1,
 		"order": 3
+	},
+	{
+		"id": 16,
+		"title": "New York Times Article Search",
+		"live_url": "https://nytviewer.herokuapp.com/",
+		"code_url": "https://github.com/jonathan-white/nytreact",
+		"image": "assets/images/news.jpg",
+		"description": "A New York Times article search that allows users to save news articles for later viewing.",
+		"categories": ["Search"],
+		"tags": ["news"],
+		"technologies": ["MongoDB","Express","React","Node.js","Bootstrap","jQuery"],
+		"showcase": 1,
+		"feature": 0,
+		"order": 16
 	}
 ]
