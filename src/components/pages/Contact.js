@@ -1,5 +1,21 @@
 import React, { Component } from "react";
 
+function sendEmail() {
+  // using SendGrid's v3 Node.js Library
+  // https://github.com/sendgrid/sendgrid-nodejs
+  const sgMail = require('@sendgrid/mail');
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+  const msg = {
+    to: 'test@example.com',
+    from: 'test@example.com',
+    subject: 'Sending with SendGrid is Fun',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+  };
+  sgMail.send(msg);
+}
+
 class Contact extends Component {
   constructor(props){
     super(props);
@@ -26,6 +42,7 @@ class Contact extends Component {
     const subject = encodeURIComponent(this.state.subject);
     const message = encodeURIComponent(this.state.message);
 
+    sendEmail();
     const emailmessage = `mailto:jon.white2@gmail.com?subject=${subject}&body=${message+` Name:${sender} Email:${email}`}`;
     window.open(emailmessage);
 
