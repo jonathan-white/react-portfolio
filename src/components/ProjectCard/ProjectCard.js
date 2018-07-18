@@ -8,11 +8,11 @@ const ProjectCard = props => {
 				<div className="project-image">
 					<img className="project-image" src={props.image} alt={props.title}/>
 				</div>
+				<div className="project-details">
+					<h3 className="project-title">{props.title}</h3>
+					<div>{props.description}</div>
+				</div>
 			</a>
-			<div className="project-details">
-				<h3 className="project-title">{props.title}</h3>
-				<div>{props.description}</div>
-			</div>
 			<div className="links">
 				{props.live_url && 
 				<div className="site-link">
