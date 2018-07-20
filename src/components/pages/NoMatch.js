@@ -9,7 +9,6 @@ const NoMatch = () => (
           <h1>
             <span role="img" aria-label="Surprised face">
               😧
-
             </span>
           </h1>
         </div>
