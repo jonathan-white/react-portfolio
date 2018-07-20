@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import SGMail from '@sendgrid/mail';
+// import SGMail from '@sendgrid/mail';
 
-SGMail.setApiKey(process.env.SENDGRID_API_KEY);
+// SGMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // function sendEmail() {
 //   // using SendGrid's v3 Node.js Library
@@ -52,7 +52,7 @@ class Contact extends Component {
       text: 'and easy to do anywhere, even with Node.js',
       html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     }
-    SGMail.send(msg);
+    // SGMail.send(msg);
 
     // const emailmessage = `mailto:jon.white2@gmail.com?subject=${subject}&body=${message+` Name:${sender} Email:${email}`}`;
     const emailmessage = `mailto:jon.white2@gmail.com?subject=${subject}&body=${`Hi Jonathan, my name is ${sender}, you can contact me at ${email}. ${message}`}`;
