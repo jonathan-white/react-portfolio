@@ -47,6 +47,7 @@
 	transition: all 750ms ease;
 	text-align: center;
 	opacity: 0;
+	padding: 20px;
 }
 
 .site-link {
