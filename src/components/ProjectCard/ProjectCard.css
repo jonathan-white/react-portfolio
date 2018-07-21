@@ -20,6 +20,15 @@
 	color: #fff;
 }
 
+.project-item > a {
+	color: #000;
+}
+
+.project-item:hover > a {
+	color: #000;
+	text-decoration: none;
+}
+
 .project-item:hover .site-link {
 	top: 10%;
 	right: -43px;
