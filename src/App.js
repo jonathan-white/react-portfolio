@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { 
-  BrowserRouter as Router, 
+import {
+  BrowserRouter as Router,
   Route,
   Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
@@ -16,18 +16,19 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <div className="App">
-        <Header />
-        <NavTabs />
-        <Switch>
-          <Route exact path="/" component={About} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/my-work" component={Portfolio} />
-          <Route exact path="/contact" component={Contact} />
-          <Route component={NoMatch} />
-        </Switch>
-        <Footer />
-      </div>
+        <div className="App">
+          <Header />
+          <NavTabs />
+          <Switch>
+            <Route exact path="/" component={About} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/my-work" component={Portfolio} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/404" component={NoMatch} />
+            <Route component={NoMatch} />
+          </Switch>
+          <Footer />
+        </div>
       </Router>
     );
   }

@@ -39,19 +39,19 @@ class Contact extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    
+
     const sender = encodeURIComponent(this.state.sender);
     const email = encodeURIComponent(this.state.email);
     const subject = encodeURIComponent(this.state.subject);
     const message = encodeURIComponent(this.state.message);
 
-    const msg = {
-      to: 'jon.white2@gmail.com',
-      from: this.state.sender,
-      subject: this.state.subject,
-      text: 'and easy to do anywhere, even with Node.js',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-    }
+    // const msg = {
+    //   to: 'jon.white2@gmail.com',
+    //   from: this.state.sender,
+    //   subject: this.state.subject,
+    //   text: 'and easy to do anywhere, even with Node.js',
+    //   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    // }
     // SGMail.send(msg);
 
     // const emailmessage = `mailto:jon.white2@gmail.com?subject=${subject}&body=${message+` Name:${sender} Email:${email}`}`;
@@ -65,13 +65,13 @@ class Contact extends Component {
       <section className="container">
         <h1>Feel free to connect with me!</h1>
         <p>
-          
+
         </p>
         <div className="container text-left">
           <form className="email-form">
             <div className="form-group">
               <label htmlFor="sender">Your Name</label>
-              <input 
+              <input
                 className="form-control"
                 placeholder="Enter your name"
                 type="text"
@@ -80,10 +80,10 @@ class Contact extends Component {
                 name="sender"
                 onChange={this.handleInputChange}
               />
-            </div>  
+            </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input 
+              <input
                 className="form-control"
                 placeholder="Enter your email address"
                 type="text"
@@ -94,10 +94,10 @@ class Contact extends Component {
                 title="Please enter a valid email."
                 onChange={this.handleInputChange}
               />
-            </div>  
+            </div>
             <div className="form-group">
               <label htmlFor="subject">Subject</label>
-              <input 
+              <input
                 className="form-control"
                 placeholder="What do you want to discuss?"
                 type="text"
@@ -106,10 +106,10 @@ class Contact extends Component {
                 name="subject"
                 onChange={this.handleInputChange}
               />
-            </div>  
+            </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea 
+              <textarea
                 className="form-control email-message"
                 placeholder={`I'd love to hear from you.
 
@@ -120,15 +120,15 @@ Regards, Jonathan`}
                 name="message"
                 onChange={this.handleInputChange}
               />
-            </div>  
-            <button 
-              className="btn btn-primary search" 
-              type="submit" 
+            </div>
+            <button
+              className="btn btn-primary search"
+              type="submit"
               onClick={this.handleFormSubmit}
             >Send Message</button>
           </form>
         </div>
-      </section>      
+      </section>
     );
   };
 };
