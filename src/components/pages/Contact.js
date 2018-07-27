@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import './Contact.css';
-import SGMail from '@sendgrid/mail';
+import SGMail from '../../@sendgrid/mail';
 
 SGMail.setApiKey(process.env.REACT_APP_SENDGRID_KEY);
 
 function sendEmail(msg) {
   // using SendGrid's v3 Node.js Library
   // https://github.com/sendgrid/sendgrid-nodejs
-  const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey(process.env.REACT_APP_SENDGRID_KEY);
+  // const sgMail = require('../../@sendgrid/mail');
+  // sgMail.setApiKey(process.env.REACT_APP_SENDGRID_KEY);
 
   // const msg = {
   //   to: 'jon.white2@gmail.com',
@@ -17,7 +17,7 @@ function sendEmail(msg) {
   //   text: 'and easy to do anywhere, even with Node.js',
   //   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
   // };
-  sgMail.send(msg);
+  SGMail.send(msg);
 }
 
 class Contact extends Component {
