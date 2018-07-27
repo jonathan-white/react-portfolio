@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import './Contact.css';
 import SGMail from '@sendgrid/mail';
 
-SGMail.setApiKey(process.env.SENDGRID_API_KEY);
+SGMail.setApiKey(process.env.REACT_APP_SENDGRID_KEY);
 
 function sendEmail(msg) {
   // using SendGrid's v3 Node.js Library
   // https://github.com/sendgrid/sendgrid-nodejs
   const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  sgMail.setApiKey(process.env.REACT_APP_SENDGRID_KEY);
 
   // const msg = {
   //   to: 'jon.white2@gmail.com',
