@@ -1,50 +1,62 @@
 [
   {
     "skill": "Node.js",
-    "image": "assets/images/icons/nodejs.png"
+    "image": "assets/images/icons/nodejs.png",
+    "title": "Node"
   },
   {
     "skill": "React",
-    "image": "assets/images/icons/react.png"
+    "image": "assets/images/icons/react.png",
+    "title": "React"
   },
   {
     "skill": "JavaScript (ES5 & ES6)",
-    "image": "assets/images/icons/javascript.png"
+    "image": "assets/images/icons/javascript.png",
+    "title": "JavaScript"
   },
   {
     "skill": "jQuery",
-    "image": "assets/images/icons/jquery.png"
+    "image": "assets/images/icons/jquery.png",
+    "title": "jQuery"
   },
   {
     "skill": "MySQL",
-    "image": "assets/images/icons/mysql.png"
+    "image": "assets/images/icons/mysql.png",
+    "title": ""
   },
   {
     "skill": "Microsoft SQL Server",
-    "image": "assets/images/icons/sql-server.png"
+    "image": "assets/images/icons/sql-server.png",
+    "title": ""
   },
   {
     "skill": "Bootstrap",
-    "image": "assets/images/icons/bootstrap.png"
+    "image": "assets/images/icons/bootstrap-stack.png",
+    "title": "Bootstrap"
   },
   {
     "skill": "Materialize CSS",
-    "image": "assets/images/icons/materialize-css.png"
+    "image": "assets/images/icons/materialize-css.png",
+    "title": "Materalize"
   },
   {
     "skill": "SharePoint Online",
-    "image": "assets/images/icons/sharepoint.png"
+    "image": "assets/images/icons/sharepoint.png",
+    "title": "SharePoint"
   },
   {
     "skill": "Microsoft Access",
-    "image": "assets/images/icons/microsoft-access.png"
+    "image": "assets/images/icons/microsoft-access.png",
+    "title": "Access"
   },
   {
     "skill": "Microsoft Excel",
-    "image": "assets/images/icons/excel.png"
+    "image": "assets/images/icons/excel.png",
+    "title": "Excel"
   },
   {
     "skill": "Java",
-    "image": "assets/images/icons/java.png"
+    "image": "assets/images/icons/java.png",
+    "title": ""
   }
 ]

@@ -231,7 +231,7 @@
 		"live_url": "https://surplus-market.herokuapp.com",
 		"code_url": "https://github.com/jonathan-white/Surplus",
 		"image": "assets/images/shopping-bags.jpg",
-		"description": "Buy or sell surplus inventory",
+		"description": "Buy or sell surplus inventory on Surplus Market.",
 		"categories": ["Retail", "Store"],
 		"tags": ["retail"],
 		"technologies": ["MongoDB","Express","React","Node.js","Materalize"],

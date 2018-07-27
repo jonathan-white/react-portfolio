@@ -26,7 +26,7 @@
 
 .nav-tabs .nav-link:hover {
   border-color: transparent;
-  background-color: #7598ce;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {

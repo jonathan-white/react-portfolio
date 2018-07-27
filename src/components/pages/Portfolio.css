@@ -1,0 +1,10 @@
+.portfolio-page {
+  margin: 40px auto;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .porfolio-wrapper {
+    margin: 0;
+  }
+}

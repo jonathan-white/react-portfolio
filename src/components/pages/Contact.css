@@ -1,4 +1,7 @@
 /* Contact Me Page */
+.contact-page {
+  margin: 40px auto;
+}
 
 .email-form .email-message {
   min-height: 100px;
@@ -7,4 +10,11 @@
 .email-form label {
   font-weight: bold;
   font-style: italic;
+}
+
+@media screen and (max-width: 576px) {
+  .contact-page {
+    padding: 20px;
+    margin-top: 20px;
+  }
 }

@@ -9,10 +9,11 @@ const About = () => (
   <section className="container about-page">
     <h1 className="intro-line">Hi, I'm Jonathan...</h1>
     <div className="about-bio">
-      <div className="about-photo">
+      <h3 className="mobile-intro-line">I'm Jonathan</h3>
+      <div className="bio-photo">
         <img id="profile-pic" src="/assets/images/pic1.jpeg" alt="Jonathan White"/>
       </div>
-      <div>
+      <div className="bio-text">
         <p className="bio">I'm a freelance full-stack web developer with a love for all things tech.
           JavaScript is like a second language for me and I enjoy building fun and creative
         apps for the web.</p>
@@ -23,15 +24,13 @@ const About = () => (
       <div className="skillset-1">
         {
           skills.map(s => (
-            <span className="skill-icon">
+            <button key={s.skill} className="skill-icon" data-title={s.title}>
               <img
-                key={s.skill}
                 className=""
-                style={{width: '20%', margin: '10px 5px'}}
+                style={{width: '100%'}}
                 src={s.image}
-                title={s.skill}
                 alt={s.skill} />
-            </span>
+            </button>
           ))
         }
       </div>
@@ -41,17 +40,18 @@ const About = () => (
       <div className="row porfolio-wrapper">
         {portfolios.filter(p => p.feature === 1)
           .sort((a,b) => (a.order-b.order))
-          .map(project => (
+          .map(project =>
             <ProjectCard
               key={project.id}
               {...project}
             />
-          )
           )}
       </div>
-      <Link className="btn btn-primary" to={`/my-work`} component={'Portfolio'}>
-        View More
-      </Link>
+      <div className="link-to-more">
+        <Link className="btn btn-primary" to={`/my-work`} component={'Portfolio'}>
+          View More
+        </Link>
+      </div>
     </div>
   </section>
 );

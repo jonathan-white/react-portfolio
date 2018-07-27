@@ -63,11 +63,8 @@ class Contact extends Component {
 
   render() {
     return (
-      <section className="container">
-        <h1>Feel free to connect with me!</h1>
-        <p>
-
-        </p>
+      <section className="container contact-page">
+        <h3>Connect</h3>
         <div className="container text-left">
           <form className="email-form">
             <div className="form-group">
