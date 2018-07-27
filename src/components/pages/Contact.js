@@ -50,7 +50,7 @@ class Contact extends Component {
       to: 'jon.white2@gmail.com',
       from: this.state.sender,
       subject: this.state.subject,
-      text: 'and easy to do anywhere, even with Node.js',
+      text: 'Test Email',
       html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     }
     sendEmail(msg);

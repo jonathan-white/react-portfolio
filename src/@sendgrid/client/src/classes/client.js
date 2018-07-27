@@ -31,6 +31,7 @@ class Client {
     this.defaultHeaders = {
       'Accept': 'application/json',
       'User-agent': 'sendgrid/' + pkg.version + ';nodejs',
+      'Access-Control-Allow-Origin': '*'
     };
 
     //Empty default request
