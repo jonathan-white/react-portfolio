@@ -1,6 +1,6 @@
 'use strict';
 const escapeStringRegexp = require('escape-string-regexp');
-const ansiStyles = require('ansi-styles');
+const ansiStyles = require('../ansi-styles');
 const stdoutColor = require('supports-color').stdout;
 
 const template = require('./templates.js');
