@@ -3,7 +3,7 @@
 /**
  * Dependencies
  */
-const chalk = require('chalk');
+const chalk = require('../../../chalk');
 
 /**
  * Response error class
