@@ -11,7 +11,7 @@ const NavTabs = () => (
           window.location.pathname === "/" || window.location.pathname === "/about" ? "nav-link active" : "nav-link"
         }
       >
-        About
+        About Me
       </Link>
     </li>
     <li className="nav-item">
@@ -21,7 +21,7 @@ const NavTabs = () => (
           window.location.pathname === "/my-work" ? "nav-link active" : "nav-link"
         }
       >
-        My Work
+        Portfolio
       </Link>
     </li>
     <li className="nav-item">

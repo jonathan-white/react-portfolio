@@ -1,0 +1,157 @@
+/* About Page */
+
+.about-page {
+  text-align: left;
+  margin: 40px auto;
+}
+
+.about-page h3 {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.about-bio {
+  display: flex;
+}
+
+.about-photo {
+  position: relative;
+  margin-right: 30px;
+}
+
+.about-photo img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 2px rgba(0,0,0,0.3);
+}
+
+.about-skills li {
+  list-style: url('../../star.svg');
+  position: relative;
+}
+
+.about-skills .skill {
+  position: relative;
+}
+
+.about-skills .skill:hover {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.about-skills .skill::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background-color: #007bff;
+  visibility: hidden;
+  transition: all 250ms ease;
+}
+
+.about-skills .skill:hover::before {
+  transform: scaleX(1);
+  visibility: visible;
+}
+
+.about-skills div {
+  margin: 0 20px;
+}
+
+.skillset-1 {
+  text-align: center;
+}
+.featured {
+  text-align: left;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  .about-page {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .about-page > * {
+    padding: 20px;
+  }
+
+  .about-page h3 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .about-photo img {
+    width: 200px;
+    width: 70%;
+    border-radius: 0;
+    padding: 8px;
+    border: 1px solid #00f;
+  }
+
+  .about-photo {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-bio {
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .bio {
+    margin: 0px 20px 50px;
+    text-align: left;
+  }
+
+  .about-skills {
+    text-align: left;
+    background-color: rgb(4, 2, 4);
+    color: #bbb;
+    padding: 20px 0;
+  }
+
+  .skill-icon {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .skill-icon img {
+    padding: 8px;
+    border-radius: 10px;
+    transition: all 700ms ease-in;
+  }
+
+  .skill-icon:hover img,
+  .skill-icon:focus img {
+    background-color: #ccc;
+  }
+
+  .intro-line {
+    display: none;
+  }
+
+  .about-projects .row {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about-skills {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .about-projects {
+    text-align: center;
+  }
+}

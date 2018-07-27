@@ -1,0 +1,10 @@
+/* Contact Me Page */
+
+.email-form .email-message {
+  min-height: 100px;
+}
+
+.email-form label {
+  font-weight: bold;
+  font-style: italic;
+}

@@ -17,9 +17,20 @@
 
 .nav-tabs .nav-link {
   color: #000;
+  border-right: 1px solid #a8b0c5;
+}
+
+.App .nav-tabs .nav-link:hover {
+  border-right: 1px solid #a8b0c5;
 }
 
 .nav-tabs .nav-link:hover {
-  border-color: transparent; 
-  font-weight: 600;
+  border-color: transparent;
+  background-color: #7598ce;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-tabs {
+    margin-top: 33px;
+  }
 }

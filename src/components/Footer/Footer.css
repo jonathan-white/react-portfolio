@@ -11,6 +11,14 @@
   color: white;
 }
 
+.App-footer .contact-info a {
+  color: #fff;
+}
+
+.App-footer .contact-info a:hover {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 768px) {
   .project-header::after {
     transform: none;
@@ -18,8 +26,12 @@
   }
 
   .App-footer {
-    height: 100px;
+    height: initial;
     justify-content: space-evenly;
+  }
+
+  .App-footer .contact-info {
+    width: 100%;
   }
 
   .App-footer .divider {
@@ -28,5 +40,9 @@
 
   .App-footer .copyright {
     display: block;
+  }
+
+  .App-footer .social-links {
+    display: none;
   }
 }

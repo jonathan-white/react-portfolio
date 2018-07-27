@@ -5,3 +5,22 @@
   color: white;
   position: relative;
 }
+
+@media screen and (max-width: 768px) {
+  .App-header {
+    padding: 0 0 5px;
+    height: initial;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+  }
+
+  .App-header h1 {
+    margin-bottom: 0;
+  }
+
+  .App-header .social-links {
+    margin: 0;
+  }
+}

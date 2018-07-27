@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Contact.css';
 // import SGMail from '@sendgrid/mail';
 
 // SGMail.setApiKey(process.env.SENDGRID_API_KEY);

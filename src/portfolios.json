@@ -61,7 +61,7 @@
 		"live_url": "https://jonathan-white.github.io/Mindful/",
 		"code_url": "https://github.com/jonathan-white/Mindful",
 		"image": "assets/images/mindful_front.png",
-		"description": "View top news articles and youtube videos via the Newstand and search for books via the interactive Bookshelf. Sign in through a Google account to save viewed news articles and books to your 'Mindfill'.",
+		"description": "Search for news articles and books and create your Mindfill.",
 		"role": "Lead Developer",
 		"Responsibilities": ["designed front-end of Newstand and Bookshelf pages","user authentication","built backend"],
 		"categories": ["Project","API"],

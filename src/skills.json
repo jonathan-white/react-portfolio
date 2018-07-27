@@ -1,0 +1,50 @@
+[
+  {
+    "skill": "Node.js",
+    "image": "assets/images/icons/nodejs.png"
+  },
+  {
+    "skill": "React",
+    "image": "assets/images/icons/react.png"
+  },
+  {
+    "skill": "JavaScript (ES5 & ES6)",
+    "image": "assets/images/icons/javascript.png"
+  },
+  {
+    "skill": "jQuery",
+    "image": "assets/images/icons/jquery.png"
+  },
+  {
+    "skill": "MySQL",
+    "image": "assets/images/icons/mysql.png"
+  },
+  {
+    "skill": "Microsoft SQL Server",
+    "image": "assets/images/icons/sql-server.png"
+  },
+  {
+    "skill": "Bootstrap",
+    "image": "assets/images/icons/bootstrap.png"
+  },
+  {
+    "skill": "Materialize CSS",
+    "image": "assets/images/icons/materialize-css.png"
+  },
+  {
+    "skill": "SharePoint Online",
+    "image": "assets/images/icons/sharepoint.png"
+  },
+  {
+    "skill": "Microsoft Access",
+    "image": "assets/images/icons/microsoft-access.png"
+  },
+  {
+    "skill": "Microsoft Excel",
+    "image": "assets/images/icons/excel.png"
+  },
+  {
+    "skill": "Java",
+    "image": "assets/images/icons/java.png"
+  }
+]
