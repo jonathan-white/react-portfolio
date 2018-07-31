@@ -1,24 +1,5 @@
 import React, { Component } from "react";
 import './Contact.css';
-import SGMail from '../../@sendgrid/mail';
-
-SGMail.setApiKey(process.env.REACT_APP_SENDGRID_KEY);
-
-function sendEmail(msg) {
-  // using SendGrid's v3 Node.js Library
-  // https://github.com/sendgrid/sendgrid-nodejs
-  // const sgMail = require('../../@sendgrid/mail');
-  // sgMail.setApiKey(process.env.REACT_APP_SENDGRID_KEY);
-
-  // const msg = {
-  //   to: 'jon.white2@gmail.com',
-  //   from: 'test@example.com',
-  //   subject: 'Sending with SendGrid is Fun',
-  //   text: 'and easy to do anywhere, even with Node.js',
-  //   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-  // };
-  SGMail.send(msg);
-}
 
 class Contact extends Component {
   constructor(props){
@@ -30,8 +11,6 @@ class Contact extends Component {
       message: ""
     }
   };
-
-  // https://mandrillapp.com/api/docs/index.JSON.html
 
   handleInputChange = event => {
     const {name, value} = event.target;
@@ -45,15 +24,6 @@ class Contact extends Component {
     const email = encodeURIComponent(this.state.email);
     const subject = encodeURIComponent(this.state.subject);
     const message = encodeURIComponent(this.state.message);
-
-    const msg = {
-      to: 'jon.white2@gmail.com',
-      from: this.state.sender,
-      subject: this.state.subject,
-      text: 'Test Email',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-    }
-    sendEmail(msg);
 
     // const emailmessage = `mailto:jon.white2@gmail.com?subject=${subject}&body=${message+` Name:${sender} Email:${email}`}`;
     const emailmessage = `mailto:jon.white2@gmail.com?subject=${subject}&body=${`Hi Jonathan, my name is ${sender}, you can contact me at ${email}. ${message}`}`;
