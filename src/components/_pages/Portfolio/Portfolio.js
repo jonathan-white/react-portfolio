@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectCard from '../ProjectCard/ProjectCard';
-import portfolios from '../../portfolios.json';
+import ProjectCard from '../../ProjectCard/';
+import portfolios from '../../../constants/portfolios.json';
 import './Portfolio.css';
 
 const Portfolio = () => (

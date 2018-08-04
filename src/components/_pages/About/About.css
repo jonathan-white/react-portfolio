@@ -29,11 +29,6 @@
   box-shadow: 5px 5px 2px rgba(0,0,0,0.3);
 }
 
-.about-skills li {
-  list-style: url('../../star.svg');
-  position: relative;
-}
-
 .about-skills .skillset-1 {
   text-align: center;
   max-width: 700px;
@@ -46,7 +41,7 @@
   width: 84px;
   height: 84px;
   display: inline-block;
-  margin: 8px;
+  margin: 8px 8px 15px;
   border-radius: 10px;
   transition: all 500ms ease-in;
   background: none;
@@ -77,11 +72,23 @@ button.skill-icon:focus {
   transform: scale(1.2);
 }
 
+.skill-info {
+  width: 80%;
+  height: auto;
+  min-height: 40%;
+  margin: 30px auto 0;
+  background-color: #ddd;
+  border-radius: 5px;
+  color: #000;
+  text-align: center;
+  padding: 30px;
+}
+
 .featured {
   text-align: left;
 }
 
-
+/* Mobile, Tablets */
 @media screen and (max-width: 768px) {
   .container {
     padding: 0;
@@ -133,7 +140,8 @@ button.skill-icon:focus {
     background-color: rgb(4, 2, 4);
     color: #bbb;
     padding: 20px 0;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
   }
 
   .skill-icon img {
@@ -158,6 +166,7 @@ button.skill-icon:focus {
   }
 }
 
+/* Laptops & Desktops */
 @media screen and (min-width: 769px) {
   .skill-icon {
     margin: 15px;
@@ -170,6 +179,10 @@ button.skill-icon:focus {
   .skill-icon:focus::after,
   .skill-icon:hover::after {
     color: #000;
+  }
+
+  .skill-info {
+    display: none;
   }
 
   .about-bio .bio-text {

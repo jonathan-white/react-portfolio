@@ -9,6 +9,14 @@
 	border: 1px solid #d3d3d3;
 }
 
+.project-item.highlight {
+	box-shadow: 2px 2px 5px 7px rgba(37, 38, 176, 0.7);
+}
+
+.project-item.dim {
+	opacity: .5;
+}
+
 .project-item:hover {
   transform: translateY(-1px) scale(1.01);
   box-shadow: 0 0 20px rgba(0,0,0,0.2), 5px 0 20px rgba(0,0,0,0.4), -5px 0 20px rgba(0,0,0,0.4);

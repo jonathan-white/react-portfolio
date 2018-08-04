@@ -3,7 +3,7 @@ import './ProjectCard.css';
 
 const ProjectCard = props => {
 	return(
-		<div className="project-item">
+		<div className={`project-item ${props.classes}`}>
 			<a href={props.live_url ? props.live_url : props.code_url} target="_blank" rel="noopener noreferrer">
 				<div className="project-image">
 					<img className="project-image" src={props.image} alt={props.title}/>

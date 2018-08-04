@@ -23,7 +23,7 @@
 		"categories": ["Game"],
 		"tags": ["star wars","crystals collector"],
 		"technologies": ["Bootstrap","jQuery"],
-		"showcase": 1,
+		"showcase": 0,
 		"feature": 0,
 		"order": 9
 	},
@@ -38,7 +38,7 @@
 		"tags": ["90s","movies","music","video games"],
 		"technologies": ["jQuery"],
 		"showcase": 1,
-		"feature": 1,
+		"feature": 0,
 		"order": 6
 	},
 	{
@@ -51,7 +51,7 @@
 		"categories": ["Random", "API"],
 		"tags": ["gifs","search"],
 		"technologies": ["jQuery","Giphy API"],
-		"showcase": 1,
+		"showcase": 0,
 		"feature": 0,
 		"order": 8
 	},
@@ -94,8 +94,8 @@
 		"description": "LIRI is a Language Intrepretation and Recognition Interface that can interact with Twitter, Spotify and the Open Movie Database (OMDb).",
 		"categories": ["API"],
 		"tags": ["search"],
-		"technologies": ["Node.js","Twitter API","Spotify API","OMDb API"],
-		"showcase": 1,
+		"technologies": ["Node","Twitter API","Spotify API","OMDb API"],
+		"showcase": 0,
 		"feature": 0,
 		"order": 11
 	},
@@ -108,8 +108,8 @@
 		"description": "Command-line hangman game.",
 		"categories": ["Game","CLI"],
 		"tags": ["hangman","command-line"],
-		"technologies": ["Node.js"],
-		"showcase": 1,
+		"technologies": ["Node"],
+		"showcase": 0,
 		"feature": 0,
 		"order": 12
 	},
@@ -122,8 +122,8 @@
 		"description": "Bamazon is a commandline app retail inventory management app. The program tracks product sales across the store's departments and provides a summary of the highest-grossing departments in the store.",
 		"categories": ["Store","CLI"],
 		"tags": ["command-line"],
-		"technologies": ["Node.js"],
-		"showcase": 1,
+		"technologies": ["Node"],
+		"showcase": 0,
 		"feature": 0,
 		"order": 13
 	},
@@ -136,8 +136,8 @@
 		"description": "FriendFinder is a compatibility-based application that takes in results from users' surveys then compares their answers with those from other users to find the best match.",
 		"categories": ["Dating"],
 		"tags": [],
-		"technologies": ["Node.js","Bootstrap","jQuery","Font Awesome","Heroku"],
-		"showcase": 1,
+		"technologies": ["Node","Bootstrap","jQuery","Font Awesome","Heroku"],
+		"showcase": 0,
 		"feature": 0,
 		"order": 14
 	},
@@ -150,8 +150,8 @@
 		"description": "Eat-Da-Burger! is a MVC restaurant app that lets users input the names of burgers they'd like to eat.",
 		"categories": [],
 		"tags": ["burgers"],
-		"technologies": ["Node.js","Bootstrap","jQuery","MySQL"],
-		"showcase": 1,
+		"technologies": ["Node","Bootstrap","jQuery","MySQL"],
+		"showcase": 0,
 		"feature": 0,
 		"order": 15
 	},
@@ -164,8 +164,8 @@
 		"description": "Eat-Da-Burger is a back and this time you can more easily add burgers and consumers.",
 		"categories": [],
 		"tags": ["burgers"],
-		"technologies": ["Node.js","Bootstrap","jQuery","MySQL"],
-		"showcase": 1,
+		"technologies": ["Node","Bootstrap","jQuery","MySQL"],
+		"showcase": 0,
 		"feature": 0,
 		"order": 16
 	},
@@ -178,7 +178,7 @@
 		"description": "App that lets users view and leave comments on the latest news from NPR or Vox.",
 		"categories": ["Scrubber"],
 		"tags": ["news","npr","vox"],
-		"technologies": ["Node.js","Bootstrap","jQuery","MongoDB","Mongoose"],
+		"technologies": ["Node","Bootstrap","jQuery","MongoDB","Mongoose"],
 		"showcase": 1,
 		"feature": 1,
 		"order": 3
@@ -192,7 +192,7 @@
 		"description": "Memory game using React. Can you beat the timer?",
 		"categories": ["Game"],
 		"tags": ["leaves"],
-		"technologies": ["Node.js","React"],
+		"technologies": ["Node","React"],
 		"showcase": 1,
 		"feature": 1,
 		"order": 2
@@ -206,7 +206,7 @@
 		"description": "Meme generator designed to make famous works of art even better through user input. Search from over 5000 works of art!",
 		"categories": ["Utility"],
 		"tags": ["memes"],
-		"technologies": ["Node.js","Bootstrap","jQuery"],
+		"technologies": ["Node","MySQL","Bootstrap","jQuery"],
 		"showcase": 1,
 		"feature": 1,
 		"order": 4
@@ -220,8 +220,8 @@
 		"description": "A New York Times article search that allows users to save news articles for later viewing.",
 		"categories": ["Search"],
 		"tags": ["news"],
-		"technologies": ["MongoDB","Express","React","Node.js","Bootstrap"],
-		"showcase": 1,
+		"technologies": ["MongoDB","Express","React","Node","Bootstrap"],
+		"showcase": 0,
 		"feature": 0,
 		"order": 17
 	},
@@ -234,9 +234,23 @@
 		"description": "Buy or sell surplus inventory on Surplus Market.",
 		"categories": ["Retail", "Store"],
 		"tags": ["retail"],
-		"technologies": ["MongoDB","Express","React","Node.js","Materalize"],
+		"technologies": ["MongoDB","Express","React","Node","Materalize"],
 		"showcase": 1,
 		"feature": 1,
 		"order": 1
+	},
+	{
+		"id": 18,
+		"title": "Metroid",
+		"live_url": "https://jonathan-white.github.io/Metroid-Game/",
+		"code_url": "https://github.com/jonathan-white/Metroid-Game",
+		"image": "assets/images/shopping-bags.jpg",
+		"description": "Play as Samus and save the galaxy from the Metroid threat.",
+		"categories": ["Game"],
+		"tags": ["game"],
+		"technologies": ["Vanilla JS"],
+		"showcase": 0,
+		"feature": 0,
+		"order": 18
 	}
 ]

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import NavTabs from './components/NavTabs/NavTabs';
-import About from './components/pages/About';
-import Portfolio from './components/pages/Portfolio';
-import Contact from './components/pages/Contact';
-import NoMatch from './components/pages/NoMatch';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+  // Import Components
+import Header from './components/Header/';
+import Footer from './components/Footer/';
+import NavTabs from './components/NavTabs/';
+
+// Import Page Components
+import About from './components/_pages/About';
+import Portfolio from './components/_pages/Portfolio';
+import Contact from './components/_pages/Contact';
+import NoMatch from './components/_pages/404';
 import './App.css';
 
 class App extends Component {

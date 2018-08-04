@@ -1,0 +1,47 @@
+[
+  {
+    "skill": "Node",
+    "image": "assets/images/icons/nodejs.png",
+    "hoverText": "Node",
+    "info": {
+      "para1": "Node.js is a JavaScript runtime, designed to build scalable network applications. I enjoy building servers using Node.js and NPM/Yarn.",
+      "para2": "Check out the projects below that are powered by Node.js!"
+    }
+  },
+  {
+    "skill": "React",
+    "image": "assets/images/icons/react.png",
+    "hoverText": "React",
+    "info": {
+      "para1": "Declarative component-based UI library. React is great at helping to reduce large projects into meaningful and managable components along with state management.",
+      "para2": "Check out my highlighted React projects below."
+    }
+  },
+  {
+    "skill": "MongoDB",
+    "image": "assets/images/icons/mongodb.png",
+    "hoverText": "",
+    "info": {
+      "para1": "Document-based No-SQL database. I enjoy using MongoDB because of the flexibility, speed, and scalability it gives you when developing.",
+      "para2": "Visit my projects below that are using MongoDB."
+    }
+  },
+  {
+    "skill": "MySQL",
+    "image": "assets/images/icons/mysql.png",
+    "hoverText": "",
+    "info": {
+      "para1": "I love using MySQL simply because I enjoy using SQL. I became accustomed to using SQL after working with Microsoft Access extensively.",
+      "para2": "You can find projects using MySQL highlighted below."
+    }
+  },
+  {
+    "skill": "jQuery",
+    "image": "assets/images/icons/jquery.png",
+    "hoverText": "jQuery",
+    "info": {
+      "para1": "jQuery is a great HTML manipulation JavaScript library that I still respect. It helps to simplify the process of sending Ajax requests.",
+      "para2": "Check out my projects below that are using jQuery."
+    }
+  }
+]
