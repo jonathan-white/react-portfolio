@@ -178,7 +178,7 @@
 		"description": "App that lets users view and leave comments on the latest news from NPR or Vox.",
 		"categories": ["Scrubber"],
 		"tags": ["news","npr","vox"],
-		"technologies": ["Node","Bootstrap","jQuery","MongoDB","Mongoose"],
+		"technologies": ["Node","Bootstrap","Handlebars","jQuery","MongoDB","Mongoose"],
 		"showcase": 1,
 		"feature": 1,
 		"order": 3

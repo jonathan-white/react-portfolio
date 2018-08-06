@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../../ProjectCard/';
 import portfolios from '../../../constants/portfolios.json';
@@ -6,28 +7,22 @@ import './About.css';
 import skills from '../../../constants/skills.json';
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedSkill: ''
-    }
+  componentDidMount() {
+    const { store } = this.context;
+    this.unsubscribe = store.subscribe(() =>
+      this.forceUpdate()
+    );
   }
 
-  handleOnClick = (skill) => {
-    if(!this.state.selectedSkill) {
-      this.setState({ selectedSkill: skill });
-    } else {
-      // this.setState({ selectedSkill: '' });
-    }
-  }
-
-  handleOnBlur = () => {
-    this.setState({
-      selectedSkill: ''
-    });
+  componentWillUnmount() {
+    this.unsubscribe();
   }
 
   render() {
+    const { store } = this.context;
+    const state = store.getState();
+    console.log(state);
+
     return (
       <section className="container about-page">
         <h1 className="intro-line">Hi, I'm Jonathan...</h1>
@@ -51,8 +46,12 @@ class About extends Component {
                   key={s.skill}
                   className="skill-icon"
                   data-title={s.hoverText}
-                  onClick={() => this.handleOnClick(s.skill)}
-                  onBlur={() => this.handleOnBlur()}
+                  onClick={() =>
+                    store.dispatch({
+                      type: 'TOGGLE_SKILL',
+                      selectedSkill: s.skill
+                    })
+                  }
                 >
                   <img
                     className=""
@@ -64,11 +63,11 @@ class About extends Component {
             }
           </div>
           {skills.map(s =>
-            (s.skill === this.state.selectedSkill) ?
-              (<div className="skill-info">
+            (s.skill === state.selectedSkill) ?
+              (<div key={s.skill} className="skill-info">
                 <p>{s.info.para1}</p>
                 <p>{s.info.para2}</p>
-              </div>) : (<p></p>)
+              </div>) : (<p key={s.skill}></p>)
           )}
         </div>
         <div className="about-projects">
@@ -81,8 +80,8 @@ class About extends Component {
                   key={project.id}
                   {...project}
                   classes={
-                    project.technologies.includes(this.state.selectedSkill) ?
-                    'highlight' : (this.state.selectedSkill ? 'dim' : '')
+                    project.technologies.includes(state.selectedSkill) ?
+                    'highlight' : (state.selectedSkill ? 'dim' : '')
                   }
                 />
               )}
@@ -96,6 +95,9 @@ class About extends Component {
       </section>
     )
   }
+};
+About.contextTypes = {
+  store: PropTypes.object
 };
 
 export default About;
