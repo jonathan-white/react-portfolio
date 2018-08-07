@@ -5,6 +5,7 @@ import ProjectCard from '../../ProjectCard/';
 import portfolios from '../../../constants/portfolios.json';
 import './About.css';
 import skills from '../../../constants/skills.json';
+import * as routes from '../../../constants/routes';
 
 class About extends Component {
   componentDidMount() {
@@ -21,7 +22,6 @@ class About extends Component {
   render() {
     const { store } = this.context;
     const state = store.getState();
-    console.log(state);
 
     return (
       <section className="container about-page">
@@ -53,11 +53,7 @@ class About extends Component {
                     })
                   }
                 >
-                  <img
-                    className=""
-                    style={{width: '100%'}}
-                    src={s.image}
-                    alt={s.skill} />
+                  <img style={{width: '100%'}} src={s.image} alt={s.skill} />
                 </button>
               ))
             }
@@ -87,7 +83,7 @@ class About extends Component {
               )}
           </div>
           <div className="link-to-more">
-            <Link className="btn btn-primary" to={`/my-work`} component={'Portfolio'}>
+            <Link className="btn btn-primary" to={routes.PORTFOLIO} component={'Portfolio'}>
               View More
             </Link>
           </div>
