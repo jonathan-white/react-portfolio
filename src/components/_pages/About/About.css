@@ -181,9 +181,9 @@ button.skill-icon:focus {
     color: #000;
   }
 
-  .skill-info {
+  /* .skill-info {
     display: none;
-  }
+  } */
 
   .about-bio .bio-text {
     padding: 13% 20px;

@@ -10,7 +10,7 @@
 }
 
 .project-item.highlight {
-	box-shadow: 0 0 5px 5px rgba(37, 38, 176, 0.7);
+	box-shadow: 0 0 5px 5px rgba(37, 38, 176, 0.5);
 }
 
 .project-item.dim {
