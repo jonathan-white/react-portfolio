@@ -6,6 +6,7 @@ import portfolios from '../../../constants/portfolios.json';
 import './About.css';
 import skills from '../../../constants/skills.json';
 import * as routes from '../../../constants/routes';
+import API from '../../../utils/API';
 
 class About extends Component {
   componentDidMount() {
@@ -22,6 +23,25 @@ class About extends Component {
   render() {
     const { store } = this.context;
     const state = store.getState();
+
+    if(!state.portfolio.hasProjects){
+      const pullPortfolio = () => {
+        API.getProjects()
+        .then(response => {
+          console.log('Load Portfolio:',response.data);
+          store.dispatch({
+            type: 'FOUND_PROJECTS'
+          });
+          store.dispatch({
+            type: 'GET_PROJECTS',
+            projects: response.data
+          });
+        })
+        .catch(err => console.error(err.message));
+        return 0;
+      }
+      pullPortfolio();
+    }
 
     return (
       <section className="container about-page">
@@ -59,7 +79,7 @@ class About extends Component {
             }
           </div>
           {skills.map(s =>
-            (s.skill === state.selectedSkill) ?
+            (s.skill === state.skill.selectedSkill) ?
               (<div key={s.skill} className="skill-info">
                 <p>{s.info.para1}</p>
                 <p>{s.info.para2}</p>
@@ -76,8 +96,8 @@ class About extends Component {
                   key={project.id}
                   {...project}
                   classes={
-                    project.technologies.includes(state.selectedSkill) ?
-                    'highlight' : (state.selectedSkill ? 'dim' : '')
+                    project.technologies.includes(state.skill.selectedSkill) ?
+                    'highlight' : (state.skill.selectedSkill ? 'dim' : '')
                   }
                 />
               )}

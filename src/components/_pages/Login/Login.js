@@ -21,7 +21,7 @@ class Login extends Component {
     const handleLogin = (event) => {
       event.preventDefault();
       console.log('Sending:',{
-        credentials: state.credentials
+        credentials: state.login.credentials
       });
     }
 
@@ -41,7 +41,7 @@ class Login extends Component {
             </div>
             <div className="inputfield">
               <label htmlFor="password">Password</label>
-              <input id="password" type={state.displayPassword ? 'text' : 'password'}
+              <input id="password" type={state.display.displayPassword ? 'text' : 'password'}
                 onChange={(e) =>
                   store.dispatch({
                     type: 'UPDATE_PASSWORD',
@@ -50,7 +50,7 @@ class Login extends Component {
                 }
               />
               {
-                state.displayPassword ? (
+                state.display.displayPassword ? (
                   <i className="fas fa-eye" title="Hide" onClick={() =>
                     store.dispatch({
                       type: 'TOGGLE_PASSWORD'
