@@ -20,12 +20,12 @@
 	color: #fff;
 }
 
-@media screen and (max-width: 576px) {
-  .App-header .social-links {
+@media screen and (max-width: 768px) {
+  /* .App-header .social-links {
     position: relative;
     right: initial;
     top: initial;
-  }
+  } */
 
   .social-links {
     justify-content: center;

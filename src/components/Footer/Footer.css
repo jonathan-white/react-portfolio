@@ -31,7 +31,8 @@
   }
 
   .App-footer .contact-info {
-    width: 100%;
+    /* width: 100%; */
+    display: none;
   }
 
   .App-footer .divider {
@@ -43,6 +44,13 @@
   }
 
   .App-footer .social-links {
-    display: none;
+    /* display: none; */
+    width: 100%;
+    margin: 0;
   }
+
+  .App-footer .fas, .App-footer .fab {
+    display: inline-block;
+  }
+
 }
