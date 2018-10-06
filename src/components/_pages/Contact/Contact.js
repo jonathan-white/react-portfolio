@@ -25,7 +25,6 @@ class Contact extends Component {
     const subject = encodeURIComponent(this.state.subject);
     const message = encodeURIComponent(this.state.message);
 
-    // const emailmessage = `mailto:jon.white2@gmail.com?subject=${subject}&body=${message+` Name:${sender} Email:${email}`}`;
     const emailmessage = `mailto:jon.white2@gmail.com?subject=${subject}&body=${`Hi Jonathan, my name is ${sender}, you can contact me at ${email}. ${message}`}`;
     window.open(emailmessage);
 

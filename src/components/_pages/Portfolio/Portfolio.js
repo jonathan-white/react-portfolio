@@ -1,7 +1,13 @@
 import React from "react";
+import { connect } from "react-redux";
 import ProjectCard from '../../ProjectCard/';
-import portfolios from '../../../constants/portfolios.json';
+import stateKeys from "../../../utils/stateKeys";
 import './Portfolio.css';
+
+// To be removed
+import portfolios from '../../../constants/portfolios.json';
+
+const mapStateToPortfolioProps = (state) => stateKeys(state);
 
 const Portfolio = () => (
   <section className="container portfolio-page">
@@ -16,4 +22,6 @@ const Portfolio = () => (
   </section>
 );
 
-export default Portfolio;
+const PortfolioPage = connect(mapStateToPortfolioProps)(Portfolio);
+
+export default PortfolioPage;

@@ -5,45 +5,13 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
-import expect from 'expect';
-import deepFreeze from 'deep-freeze';
+// import expect from 'expect';
+// import deepFreeze from 'deep-freeze';
 
 // Reducers
 // ==============================================================
 
-// Skill reducer
-const skill = (state = {}, action) => {
-  switch(action.type) {
-    case 'TOGGLE_SKILL':
-      if(state.selectedSkill === action.selectedSkill) {
-        return {
-          ...state,
-          selectedSkill: ''
-        };
-      }
-      return {
-        ...state,
-        selectedSkill: action.selectedSkill
-      }
-    default:
-      return state;
-  }
-};
-
-// Password hide/show reducer
-const display = (state = {}, action) => {
-  switch (action.type) {
-    case 'TOGGLE_PASSWORD':
-      return {
-        ...state,
-        displayPassword: !state.displayPassword
-      }
-    default:
-      return state;
-  }
-}
-
-const login = (state = {}, action) => {
+const loginManager = (state = {}, action) => {
   switch (action.type) {
     case 'UPDATE_USERNAME':
       return {
@@ -60,15 +28,25 @@ const login = (state = {}, action) => {
           ...state.credentials,
           password: action.password
         }
+			}
+		case 'TOGGLE_PASSWORD':
+      return {
+        ...state,
+        displayPassword: !state.displayPassword
       }
     default:
       return state;
   }
 }
 
-const portfolio = (state = {}, action) => {
+const portfolioManager = (state = {}, action) => {
   switch (action.type) {
-    case 'GET_PROJECTS':
+    case 'LOAD_PROJECTS':
+      return {
+        ...state,
+        projects: action.projects
+			}
+		case 'LOAD_SKILLS':
       return {
         ...state,
         projects: action.projects
@@ -82,6 +60,17 @@ const portfolio = (state = {}, action) => {
       return {
         ...state,
         hasProjects: false
+			}
+		case 'TOGGLE_SKILL':
+      if(state.selectedSkill === action.selectedSkill) {
+        return {
+          ...state,
+          selectedSkill: ''
+        };
+      }
+      return {
+        ...state,
+        selectedSkill: action.selectedSkill
       }
     default:
       return state;
@@ -89,131 +78,20 @@ const portfolio = (state = {}, action) => {
 };
 
 // Reducer composition
+// ==============================================================
+
 const portfolioApp = combineReducers({
-  skill,
-  display,
-  login,
-  portfolio
+  loginManager,
+  portfolioManager
 });
 
-// Reducer Testing
-// ==========================================================
-// const testToggleSkill = () => {
-//   const stateBefore = {
-//     skill: {selectedSkill: ''},
-//     display: {},
-//     login: {},
-//     portfolio: {}
-//   }
-//   const stateAfter = {
-//     skill: {selectedSkill: 'React'},
-//     display: {},
-//     login: {},
-//     portfolio: {}
-//   }
-//
-//   const action = {
-//     type: 'TOGGLE_SKILL',
-//     selectedSkill: 'React'
-//   }
-//
-//   deepFreeze(stateBefore);
-//   expect(
-//     portfolioApp(stateBefore.skill, action)
-//   ).toEqual(stateAfter);
-// };
-//
-// const testTogglePasswordDisplay = () => {
-//   const stateBefore = {
-//     skill: {},
-//     display: { displayPassword: true },
-//     login: {},
-//     portfolio: {}
-//   }
-//   const stateAfter = {
-//     skill: {},
-//     display: { displayPassword: false },
-//     login: {},
-//     portfolio: {}
-//   }
-//   const action = { type: 'TOGGLE_PASSWORD' }
-//
-//   deepFreeze(stateBefore);
-//   expect(
-//     portfolioApp(stateBefore, action)
-//   ).toEqual(stateAfter);
-// };
-//
-// const testUpdateUsername = () => {
-//   const stateBefore = {
-//     skill: {},
-//     display: {},
-//     login: {},
-//     portfolio: {}
-//   }
-//   const stateAfter = {
-//     skill: {},
-//     display: {},
-//     login: {
-//       credentials: {
-//         username: 'bradone'
-//       }
-//     },
-//     portfolio: {}
-//   }
-//   const action = {
-//     type: 'UPDATE_USERNAME',
-//     username: 'bradone'
-//   }
-//
-//   deepFreeze(stateBefore);
-//   expect(
-//     portfolioApp(stateBefore, action)
-//   ).toEqual(stateAfter);
-// };
-//
-// const testUpdatePassword = () => {
-//   const stateBefore = {
-//     skill: {},
-//     display: {},
-//     login: {
-//       credentials: {
-//         username: 'bradone',
-//         password: 'Password1'
-//       }
-//     },
-//     portfolio: {}
-//   }
-//   const stateAfter = {
-//     skill: {},
-//     display: {},
-//     login: {
-//       credentials: {
-//         username: 'bradone',
-//         password: 'strongPassW0rd!'
-//       }
-//     },
-//     portfolio: {}
-//   }
-//   const action = {
-//     type: 'UPDATE_PASSWORD',
-//     password: 'strongPassW0rd!'
-//   }
-//
-//   deepFreeze(stateBefore);
-//   expect(
-//     portfolioApp(stateBefore, action)
-//   ).toEqual(stateAfter);
-// };
-//
-// testToggleSkill();
-// testTogglePasswordDisplay();
-// testUpdateUsername();
-// testUpdatePassword();
-// console.log('All tests passed.');
+const store = createStore(
+	portfolioApp,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
-  <Provider store={createStore(portfolioApp)}>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')

@@ -1,86 +1,45 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { connect } from 'react-redux';
+import actions from '../../../utils/actions';
+import stateKeys from '../../../utils/stateKeys';
 import './Login.css';
 
-class Login extends Component {
-  componentDidMount() {
-    const { store } = this.context;
-    this.unsubscribe = store.subscribe(() =>
-      this.forceUpdate()
-    );
-  }
+const mapStateToLoginProps = (state) => stateKeys(state);
+const mapDispatchToLoginProps = (dispatch) => actions(dispatch);
 
-  componentWillUnmount() {
-    this.unsubscribe();
-  }
+const LoginForm = ({credentials, displayPassword, updateUsername, updatePassword,
+	togglePassword, handleLogin
+}) => (
+	<section className="container login-page">
+		<div className="login-wrapper">
+			<p>Welcome, please login</p>
+			<form id="login-form">
+				<div className="inputfield">
+					<label htmlFor="username">Username</label>
+					<input id="username" type="text" onChange={(e) => updateUsername(e.target.value)} />
+				</div>
+				<div className="inputfield">
+					<label htmlFor="password">Password</label>
+					<input id="password" type={displayPassword ? 'text' : 'password'}
+						onChange={(e) => updatePassword(e.target.value)} />
+					{displayPassword 
+						? <i className="fas fa-eye" title="Hide" onClick={() => togglePassword}></i>
+						:	<i className="far fa-eye" title="Show" onClick={() => togglePassword}></i>
+					}
+				</div>
+				<div>
+					<input className="btn btn-primary" type="submit" value="Login"
+						onClick={(e) => handleLogin(e, credentials)}
+					/>
+				</div>
+			</form>
+		</div>
+	</section>
+);
 
-  render() {
-    const { store } = this.context;
-    const state = store.getState();
-
-    const handleLogin = (event) => {
-      event.preventDefault();
-      console.log('Sending:',{
-        credentials: state.login.credentials
-      });
-    }
-
-    return (
-      <section className="container login-page">
-        <div className="login-wrapper">
-          <p>Welcome, please login</p>
-          <form id="login-form">
-            <div className="inputfield">
-              <label htmlFor="username">Username</label>
-              <input id="username" type="text" onChange={(e) =>
-                store.dispatch({
-                  type: 'UPDATE_USERNAME',
-                  username: e.target.value
-                })
-              } />
-            </div>
-            <div className="inputfield">
-              <label htmlFor="password">Password</label>
-              <input id="password" type={state.display.displayPassword ? 'text' : 'password'}
-                onChange={(e) =>
-                  store.dispatch({
-                    type: 'UPDATE_PASSWORD',
-                    password: e.target.value
-                  })
-                }
-              />
-              {
-                state.display.displayPassword ? (
-                  <i className="fas fa-eye" title="Hide" onClick={() =>
-                    store.dispatch({
-                      type: 'TOGGLE_PASSWORD'
-                    })
-                  }></i>
-                ) : (
-                  <i className="far fa-eye" title="Show" onClick={() =>
-                    store.dispatch({
-                      type: 'TOGGLE_PASSWORD'
-                    })
-                  }></i>
-                )
-              }
-            </div>
-            <div>
-              <input
-                className="btn btn-primary"
-                type="submit"
-                value="Login"
-                onClick={handleLogin}
-              />
-            </div>
-          </form>
-        </div>
-      </section>
-    )
-  }
-};
-Login.contextTypes = {
-  store: PropTypes.object
-};
+const Login = connect(
+	mapStateToLoginProps,
+	mapDispatchToLoginProps
+)(LoginForm);
 
 export default Login;
