@@ -7,9 +7,9 @@ const URI = process.env.NODE_ENV === 'development'
 
 export default {
   getProjects: () => {
-		return axios.get(`${URI}/api/projects/all`);
+		return axios.get(`https://cors-anywhere.herokuapp.com/${API_SOURCE}/api/projects/all`);
   },
   getProject: (id) => {
-    return axios.get(`${URI}/api/projects/${id}`);
+    return axios.get(`https://cors-anywhere.herokuapp.com/${API_SOURCE}/api/projects/${id}`);
   }
 }
