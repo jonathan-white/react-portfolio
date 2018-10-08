@@ -49,28 +49,7 @@ const portfolioManager = (state = {}, action) => {
 		case 'LOAD_SKILLS':
       return {
         ...state,
-        projects: action.projects
-      }
-    case 'FOUND_PROJECTS':
-      return {
-        ...state,
-        hasProjects: true
-      }
-    case 'NO_PROJECTS':
-      return {
-        ...state,
-        hasProjects: false
-			}
-		case 'TOGGLE_SKILL':
-      if(state.selectedSkill === action.selectedSkill) {
-        return {
-          ...state,
-          selectedSkill: ''
-        };
-      }
-      return {
-        ...state,
-        selectedSkill: action.selectedSkill
+        skills: action.skills
       }
     default:
       return state;

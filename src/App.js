@@ -9,7 +9,7 @@ const mapDispatchToAppProps = (dispatch) => {
 
 const App = ({pullPortfolio}) => {
 	pullPortfolio();
-	return routes
+	return routes;
 };
 
 const AppWrapper = connect(null, mapDispatchToAppProps)(App);

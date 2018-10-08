@@ -4,19 +4,16 @@ import ProjectCard from '../../ProjectCard/';
 import stateKeys from "../../../utils/stateKeys";
 import './Portfolio.css';
 
-// To be removed
-import portfolios from '../../../constants/portfolios.json';
-
 const mapStateToPortfolioProps = (state) => stateKeys(state);
 
-const Portfolio = () => (
+const Portfolio = (props) => (
   <section className="container portfolio-page">
     <h3>Projects</h3>
     <div className="row porfolio-wrapper">
-      {portfolios && portfolios
-        .filter(p => p.showcase === 1)
-        .sort((a,b) => (a.order-b.order))
-        .map(project => <ProjectCard key={project.id} {...project} />)
+      {props.projects && props.projects
+        .filter(p => p.show === true)
+        // .sort((a,b) => (a.order-b.order))
+        .map(project => <ProjectCard key={project._id} {...project} />)
       }
     </div>
   </section>
