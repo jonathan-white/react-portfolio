@@ -10,7 +10,7 @@ const ProjectCard = props => {
 				</div>
 				<div className="project-details">
 					<h3 className="project-title">{props.title}</h3>
-					<div>{props.description.short}</div>
+					<div>{props.description}</div>
 				</div>
 			</a>
 			<div className="links">

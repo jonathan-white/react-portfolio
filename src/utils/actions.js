@@ -1,15 +1,14 @@
 import API from './API';
+import projects from '../constants/portfolios.json';
 
 const actions = (dispatch) => {
 	return {
 		pullPortfolio: () => {
-			API.getProjects()
-				.then(resp => dispatch({
-					type: 'LOAD_PROJECTS',
-					projects: resp.data
-				}))
-				.catch(err => console.log(err.message));
-		},
+			dispatch({
+				type: 'LOAD_PROJECTS',
+				projects: projects
+			});
+		}
 	}
 };
 

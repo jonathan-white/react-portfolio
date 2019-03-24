@@ -11,8 +11,7 @@ const Portfolio = (props) => (
     <h3>Projects</h3>
     <div className="row porfolio-wrapper">
       {props.projects && props.projects
-        .filter(p => p.show === true)
-        // .sort((a,b) => (a.order-b.order))
+        .sort((a,b) => (b.id-a.id))
         .map(project => <ProjectCard key={project._id} {...project} />)
       }
     </div>
