@@ -6,8 +6,6 @@ import * as routePaths from '../../../utils/routePaths';
 import stateKeys from "../../../utils/stateKeys";
 import actions from "../../../utils/actions";
 import './About.css';
-
-// To be removed
 import skills from '../../../constants/skills.json';
 
 const mapStateToAboutProps = (state) => stateKeys(state);

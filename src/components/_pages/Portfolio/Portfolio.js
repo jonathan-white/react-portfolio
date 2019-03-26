@@ -12,7 +12,7 @@ const Portfolio = (props) => (
     <div className="row porfolio-wrapper">
       {props.projects && props.projects
         .sort((a,b) => (b.id-a.id))
-        .map(project => <ProjectCard key={project._id} {...project} />)
+        .map(project => <ProjectCard key={project.id} {...project} />)
       }
     </div>
   </section>

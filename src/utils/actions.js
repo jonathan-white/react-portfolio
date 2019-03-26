@@ -1,4 +1,3 @@
-import API from './API';
 import projects from '../constants/portfolios.json';
 
 const actions = (dispatch) => {
