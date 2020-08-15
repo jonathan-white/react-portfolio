@@ -1,4 +1,4 @@
 # Redirect default Netlify subdomain to primary domain
-http://jonathan-white.netlify.com/* http://www.jwhite.co/:splat 301!
+https://jonathan-white.netlify.app/* https://www.jwhite.co/:splat 301!
 
 /*  /index.html  200
