@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "deep-freeze": "0.0.1",
     "expect": "^26.3.0",
     "react": "^16.13.1",
