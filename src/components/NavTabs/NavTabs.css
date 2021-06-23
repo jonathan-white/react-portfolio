@@ -24,7 +24,7 @@
   border-right: 1px solid #a8b0c5;
 }
 
-.nav-tabs .nav-link:hover {
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link.active {
   border-color: transparent;
   font-weight: 600;
 }
