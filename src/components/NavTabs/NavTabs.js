@@ -1,38 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './NavTabs.css';
 
 const NavTabs = () => (
   <ul className="nav nav-tabs">
     <li className="nav-item">
-      <Link
+      <NavLink
         to="/about"
-        className={
-          window.location.pathname === "/" || window.location.pathname === "/about" ? "nav-link active" : "nav-link"
-        }
+        activeClassName="active"
+        className="nav-link"
       >
         About Me
-      </Link>
+      </NavLink>
     </li>
     <li className="nav-item">
-      <Link
+      <NavLink
         to="/my-work"
-        className={
-          window.location.pathname === "/my-work" ? "nav-link active" : "nav-link"
-        }
+        activeClassName="active"
+        className="nav-link"
       >
         Portfolio
-      </Link>
+      </NavLink>
     </li>
     <li className="nav-item">
-      <Link
+      <NavLink
         to="/contact"
-        className={
-          window.location.pathname === "/contact" ? "nav-link active" : "nav-link"
-        }
+        activeClassName="active"
+        className="nav-link"
       >
         Hire Me
-      </Link>
+      </NavLink>
     </li>
   </ul>
 );
