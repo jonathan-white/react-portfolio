@@ -79,7 +79,7 @@ class About extends React.Component {
 						)}
 					</div>
 					<div className="link-to-more">
-						<Link className="btn btn-primary" to={routePaths.PORTFOLIO} component={'Portfolio'}>
+						<Link className="btn btn-primary" to={routePaths.PORTFOLIO}>
 							View More
 						</Link>
 					</div>
