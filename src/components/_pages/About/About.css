@@ -64,7 +64,7 @@ button.skill-icon:focus {
 }
 
 .skill-icon img {
-  transition: all 500ms ease-in;
+  transition: all 250ms ease-in;
 }
 
 .skill-icon:hover img,
